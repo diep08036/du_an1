@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thực đơn – SỨA SỨA ƠI</title>
+
+    <link rel="stylesheet" href="ming2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>SỨA SỨA ƠI</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="menu.html" class="active">Thực đơn</a></li>
+          <li><a href="combo.html">Liên hệ</a></li>
+          <li>
+            <a href="cart.html">
+              <i class="fa-solid fa-cart-shopping"></i> Giỏ hàng
+            </a>
+          </li>
+          <li>
+            <a href="order.html"> <i class="fa-solid fa-phone"></i> Đặt món </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="menu-banner">
+      <h2>THỰC ĐƠN GỎI SỨA</h2>
+      <p>Đặc sản Cam Ranh – Thanh mát – Healthy</p>
+    </section>
+
+    <!-- DANH SÁCH MÓN -->
+    <main class="menu-page">
+      <!-- MÓN 1 -->
+      <div class="menu-item">
+        <img
+          src="https://bepnhatoi.net/wp-content/uploads/2025/04/goi-sua-nom-sua-hap-dan.webp"
+          alt="Gỏi Sứa Truyền Thống"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Truyền Thống</h3>
+          <p class="desc">
+            Sứa tươi sơ chế kỹ, trộn cùng rau sống, xoài, nước mắm chua ngọt.
+          </p>
+          <p class="price">79.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Truyền Thống',
+                79000,
+                'https://bepnhatoi.net/wp-content/uploads/2025/04/goi-sua-nom-sua-hap-dan.webp',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+          <span class="tag">Best seller</span>
+        </div>
+      </div>
+
+      <!-- MÓN 2 -->
+      <div class="menu-item">
+        <img
+          src="https://i.ytimg.com/vi/WGW2lMuY5Wg/maxresdefault.jpg"
+          alt="Gỏi Sứa Xoài Xanh"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Xoài Xanh</h3>
+          <p class="desc">Xoài xanh chua nhẹ kết hợp sứa giòn, thanh mát.</p>
+          <p class="price">85.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Xoài Xanh',
+                85000,
+                'https://i.ytimg.com/vi/WGW2lMuY5Wg/maxresdefault.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+          <span class="tag healthy">Healthy</span>
+        </div>
+      </div>
+
+      <!-- MÓN 3 -->
+      <div class="menu-item">
+        <img
+          src="https://nemnuongnhatrangbanam.com/wp-content/uploads/2024/04/goi-nem-cha-1.png"
+          alt="Gỏi Sứa Ăn Kèm Nem – Chả"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Ăn Kèm Nem – Chả</h3>
+          <p class="desc">Kết hợp nem chả quê, vị đậm đà.</p>
+          <p class="price">99.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Ăn Kèm Nem – Chả',
+                99000,
+                'https://nemnuongnhatrangbanam.com/wp-content/uploads/2024/04/goi-nem-cha-1.png',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+          <span class="tag hot">Mới</span>
+        </div>
+      </div>
+
+      <!-- MÓN 4 -->
+      <div class="menu-item">
+        <img
+          src="https://cdn.tgdd.vn/Files/2020/11/20/1308087/cach-lam-goi-rau-ma-tom-thit-thanh-mat-tuong-la-ma-quen-202011201124184506.jpg"
+          alt="Gỏi Sứa Tôm Rau Má"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Tôm Rau Má</h3>
+          <p class="desc">Sứa giòn, tôm béo, rau má thanh mát.</p>
+          <p class="price">75.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Tôm Rau Má',
+                75000,
+                'https://cdn.tgdd.vn/Files/2020/11/20/1308087/cach-lam-goi-rau-ma-tom-thit-thanh-mat-tuong-la-ma-quen-202011201124184506.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+          <span class="tag healthy">Healthy</span>
+        </div>
+      </div>
+
+      <!-- MÓN 5 -->
+      <div class="menu-item">
+        <img
+          src="https://bepxua.vn/wp-content/uploads/2022/08/cach-lam-goi-sua.jpg"
+          alt="Gỏi Sứa Sa Tế"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Sa Tế</h3>
+          <p class="desc">Sa tế cay nồng, cực bắt vị.</p>
+          <p class="price">89.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Sa Tế',
+                89000,
+                'https://bepxua.vn/wp-content/uploads/2022/08/cach-lam-goi-sua.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+          <span class="tag hot">Cay</span>
+        </div>
+      </div>
+
+      <!-- MÓN 6 -->
+      <div class="menu-item">
+        <img src="https://th.bing.com/th/id/OIP._5Th5GO-TjqEQM6udMt-YAHaEK" />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Tôm Thịt</h3>
+          <p class="desc">Tôm và thịt luộc, đủ chất.</p>
+          <p class="price">95.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Tôm Thịt',
+                95000,
+                'https://th.bing.com/th/id/OIP._5Th5GO-TjqEQM6udMt-YAHaEK',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+        </div>
+      </div>
+
+      <!-- MÓN 7 -->
+      <div class="menu-item">
+        <img
+          src="https://nuocmamtin.com/wp-content/uploads/2023/04/maxresdefault-2023-04-17T095407.065-copy.jpg"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Trộn Tắc</h3>
+          <p class="desc">Tắc chua nhẹ, dễ ăn.</p>
+          <p class="price">80.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Trộn Tắc',
+                80000,
+                'https://nuocmamtin.com/wp-content/uploads/2023/04/maxresdefault-2023-04-17T095407.065-copy.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+        </div>
+      </div>
+
+      <!-- MÓN 8 -->
+      <div class="menu-item">
+        <img
+          src="https://cdn2.fptshop.com.vn/unsafe/sua_ngam_mam_nhi_1_9011ea3886.jpg"
+        />
+        <div class="menu-info">
+          <h3>Sứa Ngâm Chua Ngọt</h3>
+          <p class="desc">Chua ngọt nhẹ, khai vị.</p>
+          <p class="price">70.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Sứa Ngâm Chua Ngọt',
+                70000,
+                'https://cdn2.fptshop.com.vn/unsafe/sua_ngam_mam_nhi_1_9011ea3886.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+        </div>
+      </div>
+
+      <!-- MÓN 9 -->
+      <div class="menu-item">
+        <img
+          src="https://tse2.mm.bing.net/th/id/OIP.UTQfINDlHn9ECXNoUjxhzQHaEJ"
+        />
+        <div class="menu-info">
+          <h3>Sứa Xào Sả Ớt</h3>
+          <p class="desc">Đậm đà miền biển.</p>
+          <p class="price">99.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Sứa Xào Sả Ớt',
+                99000,
+                'https://tse2.mm.bing.net/th/id/OIP.UTQfINDlHn9ECXNoUjxhzQHaEJ',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+        </div>
+      </div>
+
+      <!-- MÓN 10 -->
+      <div class="menu-item">
+        <img
+          src="https://cdn.tgdd.vn/2022/10/CookRecipe/Avatar/nom-sua-hanh-tay-thumbnail.jpg"
+        />
+        <div class="menu-info">
+          <h3>Gỏi Sứa Cuốn Bánh Tráng</h3>
+          <p class="desc">Ăn vặt khoái khẩu.</p>
+          <p class="price">69.000đ</p>
+          <a
+            href="cart.html"
+            class="add-cart-btn"
+            onclick="
+              addToCart(
+                'Gỏi Sứa Cuốn Bánh Tráng',
+                69000,
+                'https://cdn.tgdd.vn/2022/10/CookRecipe/Avatar/nom-sua-hanh-tay-thumbnail.jpg',
+              )
+            "
+          >
+            <i class="fa-solid fa-cart-plus"></i> Thêm vào giỏ
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- SCRIPT -->
+    <script>
+      function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const index = cart.findIndex((item) => item.name === name);
+
+        if (index !== -1) {
+          cart[index].qty += 1;
+        } else {
+          cart.push({
+            name: name,
+            price: price,
+            image: image,
+            qty: 1,
+          });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("🛒 Đã thêm vào giỏ hàng!");
+      }
+    </script>
+  </body>
+</html>

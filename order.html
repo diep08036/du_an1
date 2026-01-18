@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Đặt món – SỨA SỨA ƠI</title>
+    <link rel="stylesheet" href="ming2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>SỨA SỨA ƠI</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="menu.html">Thực đơn</a></li>
+          <li><a href="combo.html">Liên hệ</a></li>
+          <li>
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping"></i> Giỏ hàng</a
+            >
+          </li>
+          <li>
+            <a href="order.html" class="active"
+              ><i class="fa-solid fa-phone"></i> Đặt món</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- TIÊU ĐỀ -->
+    <section class="order-banner">
+      <h2>ĐẶT MÓN</h2>
+      <p>Vui lòng điền thông tin để hoàn tất đơn hàng</p>
+    </section>
+
+    <!-- FORM ĐẶT MÓN -->
+    <main class="order-page">
+      <form class="order-form">
+        <!-- THÔNG TIN KHÁCH -->
+        <h3>Thông tin khách hàng</h3>
+
+        <div class="form-group">
+          <label>Họ và tên</label>
+          <input type="text" placeholder="Nhập họ và tên" />
+        </div>
+
+        <div class="form-group">
+          <label>Số điện thoại</label>
+          <input type="tel" placeholder="Nhập số điện thoại" />
+        </div>
+
+        <div class="form-group">
+          <label>Địa chỉ giao hàng</label>
+          <textarea placeholder="Nhập địa chỉ giao hàng"></textarea>
+        </div>
+
+        <!-- THÔNG TIN ĐƠN -->
+        <h3>Thông tin đơn hàng</h3>
+        <div class="order-summary">
+          <h3>Đơn hàng của bạn</h3>
+          <p><strong>Món:</strong> <span id="item-name"></span></p>
+          <p><strong>Giá:</strong> <span id="item-price"></span></p>
+        </div>
+
+        <div class="form-group">
+          <label>Hình thức nhận hàng</label>
+          <select>
+            <option>Giao hàng tận nơi</option>
+            <option>Nhận tại cửa hàng</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Ghi chú</label>
+          <textarea placeholder="Ví dụ: Ít cay, giao buổi chiều..."></textarea>
+        </div>
+
+        <!-- THANH TOÁN -->
+        <h3>Phương thức thanh toán</h3>
+
+        <div class="payment-method">
+          <label>
+            <input type="radio" name="payment" checked />
+            Thanh toán khi nhận hàng (COD)
+          </label>
+          <label>
+            <input type="radio" name="payment" />
+            Chuyển khoản ngân hàng
+          </label>
+        </div>
+
+        <!-- NÚT -->
+        <button type="submit" class="btn submit-btn">XÁC NHẬN ĐẶT MÓN</button>
+
+        <p class="order-note">
+          <i> ⚠ Lưu ý: Món gỏi sứa không phù hợp với người dị ứng sứa. </i>
+        </p>
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2026 SỨA SỨA ƠI – Đặc sản Cam Ranh</p>
+    </footer>
+
+    <script>
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const orderBox = document.querySelector(".order-summary");
+
+      if (cart.length === 0) {
+        orderBox.innerHTML = "<p>Không có món nào trong giỏ hàng</p>";
+      } else {
+        let html = "<h3>Đơn hàng của bạn</h3>";
+        let total = 0;
+
+        cart.forEach((item) => {
+          const itemTotal = item.price * item.qty;
+          total += itemTotal;
+
+          html += `
+      <p>${item.name} × ${item.qty} —
+      ${itemTotal.toLocaleString()}đ</p>
+    `;
+        });
+
+        html += `<hr><p><strong>Tổng cộng: ${total.toLocaleString()}đ</strong></p>`;
+        orderBox.innerHTML = html;
+      }
+    </script>
+  </body>
+</html>
